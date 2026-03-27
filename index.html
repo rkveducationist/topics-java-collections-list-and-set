@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Smart Quiz and Programming Test</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Java: Interface, Collections: List and Set - Quiz and Programming Test</h1>
+
+<!-- START SCREEN -->
+
+<div id="startScreen">
+
+<input id="studentName" placeholder="Enter Your Name">
+
+<button class="btn blue" onclick="startTest()">Start Test</button>
+
+</div>
+
+<!-- WELCOME TEXT -->
+
+<h3 id="welcomeText" style="display:none"></h3>
+
+<!-- TEST SCREEN -->
+
+<div id="testScreen" style="display:none">
+
+<div class="topbar">
+
+<span id="progress"></span>
+
+<span class="timer">
+Time Left : <span id="timer"></span>
+</span>
+
+</div>
+
+<h2 id="questionTitle"></h2>
+
+<div id="mcqOptions"></div>
+
+<textarea id="codeEditor"></textarea>
+
+<div class="buttons">
+
+<button id="nextBtn" class="btn blue" onclick="submitAnswer()">Next</button>
+
+<button class="btn red" onclick="skipQuestion()">Skip</button>
+
+<button class="btn orange" onclick="showHint()">Hint</button>
+
+</div>
+
+</div>
+
+<!-- RESULT SCREEN -->
+
+<div id="resultScreen" style="display:none">
+
+<h2>Final Result</h2>
+
+<p id="studentResult"></p>
+
+<p id="scoreMCQ"></p>
+<p id="scoreCoding"></p>
+<p id="scoreTotal"></p>
+
+<!-- DOWNLOAD BUTTON -->
+
+<button onclick="downloadPDF()" class="btn blue">
+Download Result PDF
+</button>
+
+<h3>MCQ Review</h3>
+
+<div id="review"></div>
+
+</div>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
